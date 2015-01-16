@@ -1,0 +1,94 @@
+﻿@using IR_BackOffice.Models
+@{
+    ViewBag.Title = "Offers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container span10">
+
+    @*DESKTOP*@
+
+    <div class="hidden-phone offset2">
+        <div class="row-fluid">
+            <div class="span8 top-buffer" style="vertical-align: middle;">
+                <span style="font-family: Gotham-Medium; color: #3a3d3f; font-size:14pt;">SOMETHING</span>
+            </div>
+        </div>
+
+        <div class="row-fluid">
+
+            <div class="span8" style="background-color: white; vertical-align: middle;">
+                @{
+                    Html.RenderPartial("_OffersFeedMain");
+                }
+            </div>
+
+            @*TIPS*@
+
+            <div class="span4 feed-header" style="background-color: #3a3d3f; vertical-align: middle;">
+                <span style="font-family: Gotham-Medium; color: white;">SOMETHING</span>
+            </div>
+
+            <div class="span4 view-all-header" style="background-color: white; vertical-align: middle;">
+                @{
+                    Html.RenderPartial("_OffersFeed");
+                }
+            </div>
+
+            <div class="span4 row-fluid feed-footer view-all-header" style="background-color: #3a3d3f; vertical-align: middle;">
+                <span style="font-family: Gotham-Medium; color: white;">@Html.ActionLink("VIEW ALL >", "Offers", "Home", null, new { @style = "font-family: Gotham-Medium; color: white;" })</span>
+            </div>
+
+            @*BOOKMAKERS*@
+
+            <div class="span4 feed-header top-buffer" style="background-color: #3a3d3f; vertical-align: middle;">
+                <span style="font-family: Gotham-Medium; color: white;">SOMETHING</span>
+            </div>
+            <div class="span4 view-all-header" style="background-color: white; vertical-align: middle;">
+                @{
+                    Html.RenderPartial("_OffersFeed");
+                }
+            </div>
+            <div class="span4 feed-footer view-all-header top-buffer" style="background-color: #3a3d3f; vertical-align: middle;">
+                <span style="font-family: Gotham-Medium; color: white;">@Html.ActionLink("VIEW ALL >", "Offers", "Home", null, new { @style = "font-family: Gotham-Medium; color: white;" })</span>
+            </div>
+
+            @*LIVE SCORES*@
+
+            <div class="span4 feed-header top-buffer" style="background-color: #3a3d3f; vertical-align: middle;">
+                <span style="font-family: Gotham-Medium; color: white;">SOMETHING</span>
+            </div>
+            <div class="span4 view-all-header" style="background-color: white; vertical-align: middle;">
+                @{
+                    Html.RenderPartial("_OffersFeed");
+                }
+            </div>
+            <div class="span4 feed-footer view-all-header" style="background-color: #3a3d3f; vertical-align: middle;">
+                <span style="font-family: Gotham-Medium; color: white;">@Html.ActionLink("VIEW ALL >", "Offers", "Home", null, new { @style = "font-family: Gotham-Medium; color: white;" })</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*PHONE*@
+
+<div class="hidden-tablet hidden-desktop">
+    <div class="row-fluid">
+        <div class="span8" style="vertical-align: middle; padding-left: 10px; padding-bottom: 15px;">
+            <span style="font-family: Gotham-Medium; color: #3a3d3f; font-size: 14pt;">SOMETHING</span>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+
+        <div class="span8" style="background-color: white; vertical-align: middle;">
+            @{
+                Html.RenderPartial("_OffersFeedMain");
+            }
+        </div>
+    </div>
+</div>
+
+
+
