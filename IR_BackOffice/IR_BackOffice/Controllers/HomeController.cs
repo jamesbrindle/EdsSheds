@@ -30,17 +30,27 @@ namespace IR_BackOffice.Controllers
             return View();
         }
 
-        public ActionResult Sitemap()
-        {
-            return View();
-        }
-
         public ActionResult PrivacyPolicy()
         {
             return View();
         }
 
+        public ActionResult PriceLists()
+        {
+            return View();
+        }
+
+        public ActionResult Gallery()
+        {
+            return View();
+        }
+
         public ActionResult Contact()
+        {
+            return View();
+        }
+
+        public ActionResult FindingUs()
         {
             return View();
         }

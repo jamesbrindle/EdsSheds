@@ -29,6 +29,15 @@ namespace IR_BackOffice.App_Start
             routes.MapRoute("Contact", "contact", new { controller = "Home", action = "Contact" }
                );
 
+            routes.MapRoute("FindingUs", "finding-us", new { controller = "Home", action = "FindingUs" }
+               );
+
+            routes.MapRoute("PriceLists", "price-lists", new { controller = "Home", action = "PriceLists" }
+               );
+
+            routes.MapRoute("Gallery", "gallery", new { controller = "Home", action = "Gallery" }
+               );
+
             // ADMIN
 
             routes.MapRoute("OffersAdmin", "offers-admin", new { controller = "Offers", action = "Index" }

@@ -11,6 +11,15 @@ div.imagebuttons {
     *display: inline;
     *zoom: 1;
 }
+div.download {
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+    border: 1px solid blue;
+}
+
+div p {
+    text-align: center;
+}
 
 .imagebuttons img {
     text-align: center;
@@ -28,8 +37,6 @@ body {
     background-color: white;
     margin-left: 40px;
 }
-
-
 
 .main {
     border: 0.5em solid #8bb839;
@@ -119,3 +126,4 @@ ul li.greyitem a:hover {
 fieldset legend {
         display: none;
     }
+
