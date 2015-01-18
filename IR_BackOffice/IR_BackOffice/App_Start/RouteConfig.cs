@@ -38,6 +38,40 @@ namespace IR_BackOffice.App_Start
             routes.MapRoute("Gallery", "gallery", new { controller = "Home", action = "Gallery" }
                );
 
+            // GALLERIES
+
+            routes.MapRoute("Sheds", "standard-sheds", new { controller = "Home", action = "Sheds" }
+               );
+
+            routes.MapRoute("Summerhouses", "summerhouses", new { controller = "Home", action = "Summerhouses" }
+               );
+
+            routes.MapRoute("Playhouses", "playhouses", new { controller = "Home", action = "Playhouses" }
+               );
+
+            routes.MapRoute("LogCabins", "log-cabins", new { controller = "Home", action = "LogCabins" }
+               );
+
+            routes.MapRoute("Lugarde", "lugarde", new { controller = "Home", action = "Lugarde" }
+               );
+
+            routes.MapRoute("Workshops", "workshops", new { controller = "Home", action = "Workshops" }
+               );
+
+            routes.MapRoute("Furniture", "garden-furniture", new { controller = "Home", action = "Furniture" }
+               );
+
+            routes.MapRoute("GatesAndFencing", "gates-and-fencing", new { controller = "Home", action = "GatesAndFencing" }
+               );
+
+            routes.MapRoute("Decking", "decking", new { controller = "Home", action = "Decking" }
+               );
+
+            routes.MapRoute("BrightIdeas", "bright-ideas", new { controller = "Home", action = "BrightIdeas" }
+               );
+
+            //
+
             // ADMIN
 
             routes.MapRoute("OffersAdmin", "offers-admin", new { controller = "Offers", action = "Index" }
