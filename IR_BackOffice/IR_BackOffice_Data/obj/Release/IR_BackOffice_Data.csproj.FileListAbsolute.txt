@@ -1,0 +1,5 @@
+H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice_Data\bin\Release\IR_BackOffice_Data.dll
+H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice_Data\bin\Release\IR_BackOffice_Data.pdb
+H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice_Data\obj\Release\IR_BackOffice_Data.dll
+H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice_Data\obj\Release\IR_BackOffice_Data.pdb
+H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice_Data\obj\Release\IR_BackOffice_Data.csprojResolveAssemblyReference.cache

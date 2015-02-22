@@ -1,0 +1,198 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model ES_BackOffice.Models.EnquiryModel
+
+
+<div class="row offset2 span8 hidden-phone" style="font-family: Gotham-Medium; font-size: 10pt; padding-bottom: 30px;">
+    <div class="span5 hidden-phone" ">
+        <br /><br /><br />
+        <span style="font-family:Gotham-Medium; font-size:11pt;">
+            Contact Us By Telephone
+        </span>
+
+        <br /><br />
+        <span style="font-family:Gotham-Medium; font-size:11pt;">
+            01282 788669
+        </span>
+
+        <br /><br /><br />
+        <span style="font-family:Gotham-Medium; font-size:11pt;">
+            Contact Us By Email
+        </span>
+        <br /><br />
+
+        <span style="font-family:Gotham-Light; font-size:11pt;">
+            <a target="_blank" href="mailto:edssheds@ntlworld.com" style="color: blue;">edssheds@ntlworld.com</a>
+        </span>
+        <br /><br /><br />
+
+        <span style="font-family:Gotham-Medium; font-size:11pt;">
+            Contact Us By Post
+        </span>
+        <br /><br />
+
+        <span style="font-family:Gotham-Light; font-size:11pt;">
+            The yard <br />
+            Grafton Street, <br />
+            Nelson, <br />
+            Lancashire <br />
+            BB9 8AG
+        </span>
+
+        <br /><br />
+        <br />
+        <br />
+
+        <span style="font-family:Gotham-Bold; font-size:12pt;">
+            Please note, we no longer have a showroom.
+        </span>
+        <br /><br />
+    </div>
+    <div class="span7 hidden-phone">
+
+        @using (Html.BeginForm())
+        {
+            <br />
+            <fieldset>
+                <legend style="font-size: 14pt;">CONTACT FORM</legend>
+                <div style="color: red;">
+                    @Html.ValidationSummary()
+                </div>
+                <div style="color: red;">
+                    <span>Thank you for your message or enquiry. Someone will be in touch as soon as possible.</span><br />
+                    <br />
+                </div>
+                <ol style="margin-left: -39px;">
+                    <li style="list-style: none;">
+                        @* @Html.LabelFor(m => m.ContactName)*@
+                        @Html.TextBoxFor(m => m.ContactName, new { @placeholder = "Name", @style = "width:100%; height: 25px;" })
+                    </li>
+                    <li style="list-style: none;">
+                        @*@Html.LabelFor(m => m.TelephoneNumber)*@
+                        @Html.TextBoxFor(m => m.TelephoneNumber, new { @placeholder = "Tel", @style = "width:100%; height: 25px;" })
+                    </li>
+                    <li style="list-style: none;">
+                        @*@Html.LabelFor(m => m.EmailAddress)*@
+                        @Html.TextBoxFor(m => m.EmailAddress, new { @placeholder = "Email", @style = "width:100%; height: 25px;" })
+                    </li>
+                    <li style="list-style: none;">
+                        @* @Html.LabelFor(m => m.EmailConfirm)*@
+                        @Html.TextBoxFor(m => m.EmailConfirm, new { @placeholder = "Confirm Email", @style = "width:100%; height: 25px;" })
+                    </li>
+                    <li style="list-style: none;">
+                        @*@Html.LabelFor(m => m.Enquiry)*@
+                        @Html.TextAreaFor(m => m.Enquiry, new { @placeholder = "Message or enquiry", @style = "width:100%;", @rows = "8" })
+                    </li>
+                    <li style="list-style: none;">
+                        @Html.CheckBoxFor(m => m.SendToSelf)<span style="display: inline; font-size: 12px; font-family: Gotham-Medium">&nbsp;&nbsp;Send a copy to yourself</span>
+                    </li>
+                </ol>
+                <script src="~/Scripts/placeholder.js"></script>
+                &nbsp;&nbsp;<input type="submit" value="Submit" style="width: 100px!important; margin-left: -8px;" />
+            </fieldset>
+        }
+    </div>
+</div>
+
+
+
+
+
+<div class="row offset2 span8 hidden-tablet hidden-desktop" style="font-family: Gotham-Medium; -moz-min-width: 462px; -ms-min-width: 462px; -o-min-width: 462px; -webkit-min-width: 462px; min-width: 462px; font-size: 10pt; padding-bottom: 30px;">
+    <div class="span12 hidden-tablet hidden-desktop" style="margin-left: 24px; -moz-min-width: 462px; -ms-min-width: 462px; -o-min-width: 462px; -webkit-min-width: 462px; min-width: 462px;">
+        <br />
+        <span style="font-family:Gotham-Medium; font-size:11pt;">
+            Contact Us By Telephone
+        </span>
+
+        <br /><br />
+        <span style="font-family:Gotham-Medium; font-size:11pt;">
+            01282 788669
+        </span>
+
+        <br /><br /><br />
+        <span style="font-family:Gotham-Medium; font-size:11pt;">
+            Contact Us By Email
+        </span>
+        <br /><br />
+
+        <span style="font-family:Gotham-Light; font-size:11pt;">
+            <a target="_blank" href="mailto:edssheds@ntlworld.com" style="color: blue;">edssheds@ntlworld.com</a>
+        </span>
+        <br /><br /><br />
+
+        <span style="font-family:Gotham-Medium; font-size:11pt;">
+            Contact Us By Post
+        </span>
+        <br /><br />
+
+        <span style="font-family:Gotham-Light; font-size:11pt;">
+            The yard <br />
+            Grafton Street, <br />
+            Nelson, <br />
+            Lancashire <br />
+            BB9 8AG
+        </span>
+
+        <br /><br />
+        <br />
+        <br />
+
+        <span style="font-family:Gotham-Bold; font-size:12pt;">
+            Please note, we no longer have a showroom.
+        </span>
+        <br /><br />
+    </div>
+
+    <div class="span12 hidden-tablet hidden-desktop" style="-moz-min-width: 462px; -ms-min-width: 462px; -o-min-width: 462px; -webkit-min-width: 462px; min-width: 462px;">
+
+        @using (Html.BeginForm())
+        {
+            <br />
+            <fieldset>
+                <legend>&nbsp;&nbsp;&nbsp;&nbsp;CONTACT FORM</legend>
+                <div style="margin-left:18px; color: red;">
+                    @Html.ValidationSummary()
+                </div>
+                <div style="color: red; margin-left:25px; margin-right:25px;">
+                    <span>Thank you for your message or enquiry. Someone will be in touch as soon as possible.</span><br />
+                    <br />
+                </div>
+                <ol>
+                    <li style="list-style: none;">
+                        @* @Html.LabelFor(m => m.ContactName)*@
+                        @Html.TextBoxFor(m => m.ContactName, new { @placeholder = "Name", @class = "offset2", @style = "margin-left: -15px; width: 95%; height: 25px;" })
+                    </li>
+                    <li style="list-style: none;">
+                        @*@Html.LabelFor(m => m.TelephoneNumber)*@
+                        @Html.TextBoxFor(m => m.TelephoneNumber, new { @placeholder = "Tel", @class = "offset2", @style = "margin-left: -15px; width: 95%; height: 25px;" })
+                    </li>
+                    <li style="list-style: none;">
+                        @*@Html.LabelFor(m => m.EmailAddress)*@
+                        @Html.TextBoxFor(m => m.EmailAddress, new { @placeholder = "Email", @class = "offset2", @style = "margin-left: -15px; width: 95%; height: 25px;" })
+                    </li>
+                    <li style="list-style: none;">
+                        @* @Html.LabelFor(m => m.EmailConfirm)*@
+                        @Html.TextBoxFor(m => m.EmailConfirm, new { @placeholder = "Confirm Email", @class = "offset2", @style = "margin-left: -15px; width: 95%; height: 25px;" })
+                    </li>
+                    <li style="list-style: none;">
+                        @*@Html.LabelFor(m => m.Enquiry)*@
+                        @Html.TextAreaFor(m => m.Enquiry, new { @placeholder = "Message or enquiry", @class = "offset2", @style = "margin-left: -15px; width: 95%; height: 25px;", @rows = "8" })
+                    </li>
+                    <li style="list-style: none;">
+                        @Html.CheckBoxFor(m => m.SendToSelf)<span style="display: inline; font-size: 12px; font-family: Gotham-Medium;">&nbsp;&nbsp;Send a copy to yourself</span>
+                    </li>
+                </ol>
+                <script src="~/Scripts/placeholder.js"></script>
+                <input type="submit" value="Submit" style="width: 100px!important; margin-left: 25px;" />
+            </fieldset>
+        }
+
+    </div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~bundles/jqueryval")
+}

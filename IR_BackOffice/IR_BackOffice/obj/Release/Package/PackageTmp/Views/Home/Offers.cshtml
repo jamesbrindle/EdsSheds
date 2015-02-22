@@ -1,0 +1,72 @@
+﻿@using IR_BackOffice.Models
+@{
+    ViewBag.Title = "Offers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+
+    @*DESKTOP*@
+
+    <div class="container" style="background-color: #f6f4bf;">
+
+        @*DESKTOP*@
+
+        <div class="span8 offset2 hidden-phone">
+            <div class="row-fluid">
+                <div class="top-buffer" style="vertical-align: middle;">
+                    <span style="font-family: Gotham-Medium; color: #3a3d3f; font-size: 14pt;">CURRENT OFFERS</span>
+                </div>
+                <br />
+            </div>
+            <div class="row-fluid">
+                <div class="span8 view-all-header" style="background-color: #f6f4bf; vertical-align: middle; margin-left: -10px; padding-right:10px;">
+                    @{
+                        Html.RenderPartial("_OffersFeedMain");
+                    }
+                </div>
+
+                <div class="span4 view-all-header" style="background-color: #f6f4bf; vertical-align: middle;">
+                    <a href="~/Images/Content/HomeImages/shed.JPG" target="_blank">
+                        <img src="~/Images/Content/HomeImages/shed.jpg" alt="" style="padding-bottom:10px;">
+                    </a>
+                    <a href="~/Images/Content/HomeImages/logcabin.jpg" target="_blank">
+                        <img src="~/Images/Content/HomeImages/logcabin.jpg" alt="" style="padding-bottom:10px;">
+                    </a>
+                    <a href="~/Images/Content/HomeImages/summerhouse.jpg" target="_blank">
+                        <img src="~/Images/Content/HomeImages/summerhouse.jpg" alt="" style="padding-bottom:10px;">
+                    </a>
+                    <a href="~/Images/Content/HomeImages/workshop.jpg" target="_blank">
+                        <img src="~/Images/Content/HomeImages/workshop.jpg" alt="" style="padding-bottom:10px;">
+                    </a>               
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <br />
+</div>
+
+@*PHONE*@
+
+<div class="hidden-tablet hidden-desktop">
+    <div class="row-fluid">
+        <div class="span8" style="vertical-align: middle; padding-left: 10px; padding-bottom: 15px;">
+            <span style="font-family: Gotham-Medium; color: #3a3d3f; font-size: 14pt;">CURRENT OFFERS</span>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+
+        <div class="span8" style="background-color: white; vertical-align: middle;">
+            @{
+                Html.RenderPartial("_OffersFeedMain");
+            }
+        </div>
+        <br />
+    </div>
+</div>
+
+
+
