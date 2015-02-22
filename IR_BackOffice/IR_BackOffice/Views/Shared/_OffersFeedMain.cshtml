@@ -1,0 +1,70 @@
+﻿@using IR_BackOffice.Models
+
+<div id="divOffersFeedMain" style="overflow-y: auto; background-color: #f6f4bf;">
+    @{
+        var db = new IR_BackOffice.Infrastructure.IR_Database();
+
+        try
+        {
+            var items = db.OfferItems.OrderByDescending(u => u.DateAdded).Where(u => u.IsLive).Take(10);
+
+            if (!items.Any())
+            {
+                <div style="background-color: #f6f4bf; padding: 10px 10px 10px 10px;">
+                    <span style="font-family: Gotham-Medium; color: black;">There are no offers to display at this time.</span>
+                </div>
+            }
+            else
+            {
+                <div style="height: 15px"></div>
+
+                int index = 1;
+                int itemCount = items.Count();
+
+                foreach (var item in items)
+                {
+                    <div style="background-color: #f6f4bf; line-height: 20px; padding: 5px 10px 5px 10px; margin-top: -10px;">
+                        <table>
+                            <tr style="vertical-align: middle;">
+                                <td style="width: 180px; text-align: left;">
+                                    <img style="border: 0px none white; max-width: 150px; margin-right: 10px; margin-bottom: 6px;" src="@Url.Action("DisplayImageAsync", "Offers", new { id = item.Id })" />
+                                </td>
+                                <td style="vertical-align: middle;" colspan="2">
+                                    <span style="font-family: Gotham-Medium; font-size: 11pt;">@item.DateAdded.ToLongDateString()</span><br />
+                                    <br />
+                                    <span style="font-family: Gotham-Bold; color: Black; font-size: 12pt;">@item.Title.ToUpper()</span><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle;" colspan="2">
+                                    <br />
+                                    <span style="font-family: Gotham-Light; color: Black; font-size: 10pt;">@Html.Raw(@item.Text)</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="hr"></div>
+                    </div>
+
+                    if (index != itemCount)
+                    {
+                        <div style="background-color: white; height: 2px;">
+                        </div>
+                    }
+
+                    index++;
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            Console.Out.WriteLine("Error: " + e.Message);
+
+            <div style="background-color: #f6f4bf; padding: 10px 10px 10px 10px;">
+
+                <span style="font-family: Gotham-Medium; color: black;">There are no offers to display at this time.</span>
+
+            </div>
+        }
+    }
+
+</div>

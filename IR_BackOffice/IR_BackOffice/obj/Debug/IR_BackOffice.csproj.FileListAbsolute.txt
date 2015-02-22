@@ -23,7 +23,6 @@ H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\System.N
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\System.Spatial.dll
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\System.Web.Helpers.dll
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\System.Web.Http.dll
-H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\System.Web.Http.OData.dll
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\System.Web.Http.WebHost.dll
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\System.Web.Mvc.dll
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\System.Web.Optimization.dll
@@ -38,7 +37,6 @@ H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\IR_BackO
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Antlr3.Runtime.pdb
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\EntityFramework.xml
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\EntityFramework.SqlServer.xml
-H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Newtonsoft.Json.xml
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\PagedList.xml
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\PagedList.Mvc.xml
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\System.Web.Optimization.xml
@@ -60,7 +58,6 @@ H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\DotNetOp
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\DotNetOpenAuth.OAuth.xml
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\DotNetOpenAuth.OpenId.xml
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
-H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\System.Web.Http.OData.xml
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Microsoft.Data.Edm.xml
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Microsoft.Data.OData.xml
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\System.Spatial.xml
@@ -94,10 +91,10 @@ H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\zh-Hant\
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\obj\Debug\IR_BackOffice.csprojResolveAssemblyReference.cache
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\obj\Debug\IR_BackOffice.dll
 H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\obj\Debug\IR_BackOffice.pdb
-H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Content\fonts\Gotham\Gotham Bold.otf
-H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Content\fonts\Gotham\Gotham BoldItalic.otf
-H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Content\fonts\Gotham\Gotham BookItalic.otf
-H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Content\fonts\Gotham\Gotham Light.otf
-H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Content\fonts\Gotham\Gotham LightItalic.otf
-H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Content\fonts\Gotham\Gotham Medium.otf
-H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Content\fonts\Gotham\Gotham MediumItalic.otf
+H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Content\fonts\Gotham\Gotham-MediumItalic.otf
+H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Content\fonts\Gotham\Gotham-Bold.otf
+H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Content\fonts\Gotham\Gotham-BoldItalic.otf
+H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Content\fonts\Gotham\Gotham-BookItalic.otf
+H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Content\fonts\Gotham\Gotham-Light.otf
+H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Content\fonts\Gotham\Gotham-LightItalic.otf
+H:\Documents\Work\Repositories\EdsSheds\IR_BackOffice\IR_BackOffice\bin\Content\fonts\Gotham\Gotham-Medium.otf
