@@ -33,11 +33,12 @@ namespace IR_BackOffice.Controllers
         {
             if (ModelState.IsValid)
             {
-                WebImage image = null;
+                WebImage image = null;                
 
                 try
                 {
                     image = WebImage.GetImageFromRequest();
+                    image = image.Resize(250, 250, true);
                 }
                 catch (Exception e)
                 {
@@ -52,6 +53,7 @@ namespace IR_BackOffice.Controllers
                     offerItem.Image = toPutInDb;
                 }
 
+                offerItem.Title = input.Title;
                 offerItem.Text = input.Text;
                 offerItem.DateAdded = input.DateAdded;
                 offerItem.IsLive = input.IsLive;

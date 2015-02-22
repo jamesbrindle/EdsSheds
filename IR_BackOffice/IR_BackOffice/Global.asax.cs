@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using IR_BackOffice.App_Start;
+using IR_BackOffice.Models;
 
 namespace IR_BackOffice
 {

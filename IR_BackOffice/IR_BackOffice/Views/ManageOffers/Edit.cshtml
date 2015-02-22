@@ -29,18 +29,23 @@
                     <div>
                         Image
                     </div>
+                    <div>
+                        (Try to make the images roughly 1024px x 613px so the images match the rest of the site layout).
+                        <br />
+                        <br />
+                    </div>
                     <input type="file" name="image" />
 
                 </td>
                 <td style="vertical-align: middle;">
-                    <img src="@Url.Action("DisplayImageAsync", "Bookmaker", new { id = Model.Id })" />
+                    <img src="@Url.Action("DisplayImageAsync", "Offers", new { id = Model.Id })" />
                 </td>
             </tr>
         </table>
 
         <div>
             <br />
-            Context
+            Content
         </div>
         <div>
             @Html.EditorFor(model => model.Text)

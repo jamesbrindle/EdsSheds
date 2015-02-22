@@ -44,7 +44,7 @@ namespace IR_BackOffice.Models
         [Display(Name = "Text")]
         public string Text { get; set; }
 
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime)]
         [Required]
         [Display(Name = "Date Added")]
         public DateTime DateAdded
@@ -53,8 +53,8 @@ namespace IR_BackOffice.Models
             set { _dateAdded = value; }
         }
 
-        [Display(Name = "Image")]
-        public byte[] Image { get; set; }
+        //[Display(Name = "Image")]
+        //public byte[] Image { get; set; }
 
         [Required]
         [Display(Name = "Is Live?")]
@@ -78,13 +78,13 @@ namespace IR_BackOffice.Models
         [Display(Name = "Text")]
         public string Text { get; set; }
 
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime)]
         [Required]
         [Display(Name = "Date Added")]
         public DateTime DateAdded { get; set; }
 
-        [Display(Name = "Image")]
-        public byte[] Image { get; set; }
+        //[Display(Name = "Image")]
+        //public byte[] Image { get; set; }
 
         [Required]
         [Display(Name = "Is Live?")]

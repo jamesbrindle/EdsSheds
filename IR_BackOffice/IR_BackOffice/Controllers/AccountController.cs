@@ -71,8 +71,8 @@ namespace IR_BackOffice.Controllers
             return View();
         }
 
-        //
-        // POST: /Account/Register
+        
+         //POST: /Account/Register
 
         [HttpPost]
         [AllowAnonymous]

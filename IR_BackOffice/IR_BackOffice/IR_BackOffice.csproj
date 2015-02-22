@@ -38,6 +38,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
@@ -208,7 +209,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\IR_Database.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Configurationl.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\OfferModels.cs" />
     <Compile Include="Models\EnquiryModel.cs" />
@@ -358,7 +359,6 @@
     <Content Include="Images\Content\Gallery\GatesAndFencing\nbig.jpg" />
     <Content Include="Images\Content\Gallery\GatesAndFencing\obig.jpg" />
     <Content Include="Images\Content\Gallery\GatesAndFencing\pbig.jpg" />
-    <Content Include="Images\Content\Gallery\GatesAndFencing\PICT0047.jpg" />
     <Content Include="Images\Content\Gallery\logcabin.jpg" />
     <Content Include="Images\Content\Gallery\LogCabins\01-08-08_1358.jpg" />
     <Content Include="Images\Content\Gallery\LogCabins\1big.jpg" />
@@ -378,7 +378,6 @@
     <Content Include="Images\Content\Gallery\LogCabins\IMAG0226.jpg" />
     <Content Include="Images\Content\Gallery\LogCabins\lognew.JPG" />
     <Content Include="Images\Content\Gallery\LogCabins\lugarde\p10-PrimaBella.jpg" />
-    <Content Include="Images\Content\Gallery\LogCabins\lugarde\p11-PrimaChantal.jpg" />
     <Content Include="Images\Content\Gallery\LogCabins\lugarde\p11-PrimaGrandLady.jpg" />
     <Content Include="Images\Content\Gallery\LogCabins\lugarde\p13-PrimaGrandFour.jpg" />
     <Content Include="Images\Content\Gallery\LogCabins\lugarde\p13-PrimaGrandFour2.jpg" />
@@ -459,7 +458,6 @@
     <Content Include="Images\Content\Gallery\LogCabins\lugarde\p9-PrimaExcellent.jpg" />
     <Content Include="Images\Content\Gallery\LogCabins\lugarde\p9-PrimaExcellentdeLuxe.jpg" />
     <Content Include="Images\Content\Gallery\LogCabins\lugarde\p9-PrimaSunshine.jpg" />
-    <Content Include="Images\Content\Gallery\LogCabins\PICT0040.JPG" />
     <Content Include="Images\Content\Gallery\shed.jpg" />
     <Content Include="Images\Content\Gallery\PetBuildings\abig.jpg" />
     <Content Include="Images\Content\Gallery\PetBuildings\aviarybig.jpg" />
@@ -571,7 +569,6 @@
     <Content Include="Images\Content\HomeImages\shed.JPG" />
     <Content Include="Images\Content\HomeImages\summerhouse.jpg" />
     <Content Include="Images\Content\HomeImages\workshop.jpg" />
-    <Content Include="Images\Content\match.jpg" />
     <Content Include="Images\Content\nailgun.jpg" />
     <Content Include="Images\Content\Pavilion.jpg" />
     <Content Include="Images\facebook_button.png" />
@@ -586,13 +583,6 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\carousel.js" />
-    <Content Include="Content\fonts\Gotham\Gotham Bold.otf" />
-    <Content Include="Content\fonts\Gotham\Gotham BoldItalic.otf" />
-    <Content Include="Content\fonts\Gotham\Gotham BookItalic.otf" />
-    <Content Include="Content\fonts\Gotham\Gotham Light.otf" />
-    <Content Include="Content\fonts\Gotham\Gotham LightItalic.otf" />
-    <Content Include="Content\fonts\Gotham\Gotham Medium.otf" />
-    <Content Include="Content\fonts\Gotham\Gotham MediumItalic.otf" />
     <Content Include="Documents\eds_sheds_fencing_prices.pdf" />
     <Content Include="Documents\eds_sheds_letterhead.pdf" />
     <Content Include="Documents\eds_sheds_optional_extras.pdf" />
@@ -600,6 +590,28 @@
     <Content Include="Documents\eds_sheds_standard_shed_prices.pdf" />
     <Content Include="Documents\eds_sheds_summer_building_prices.pdf" />
     <Content Include="Documents\eds_sheds_terms_and_conditions.pdf" />
+    <Content Include="Content\fonts\Gotham\Gotham-MediumItalic.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\Gotham\Gotham-Bold.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\Gotham\Gotham-BoldItalic.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\Gotham\Gotham-BookItalic.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\Gotham\Gotham-Light.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\Gotham\Gotham-LightItalic.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\Gotham\Gotham-Medium.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\PublishProfiles\Eds Sheds.pubxml" />
     <None Include="Properties\PublishProfiles\Stag.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -874,12 +886,9 @@
     <Content Include="Scripts\tinymce\utils\form_utils.js" />
     <Content Include="Scripts\tinymce\utils\mctabs.js" />
     <Content Include="Scripts\tinymce\utils\validate.js" />
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <Content Include="Views\favicon.ico" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
@@ -923,12 +932,10 @@
     <Content Include="Views\ManageOffers\Details.cshtml" />
     <Content Include="Views\ManageOffers\Edit.cshtml" />
     <Content Include="Views\ManageOffers\Index.cshtml" />
-    <Content Include="Views\Offer\Index.cshtml" />
     <Content Include="Views\Home\PrivacyPolicy.cshtml" />
     <Content Include="Views\Home\TermsAndConditions.cshtml" />
     <Content Include="Views\Home\Offers.cshtml" />
     <Content Include="Views\Shared\_OffersFeed.cshtml" />
-    <Content Include="Views\Offer\Offer.cshtml" />
     <Content Include="Views\Home\Sitemap.cshtml" />
     <Content Include="Views\Shared\_OffersFeedMain.cshtml" />
     <Content Include="Views\Home\FindingUs.cshtml" />
@@ -944,6 +951,15 @@
     <Content Include="Views\Home\Decking.cshtml" />
     <Content Include="Views\Home\BrightIdeas.cshtml" />
     <Content Include="Views\Home\Lugarde.cshtml" />
+    <Content Include="Views\Offers\Index.cshtml" />
+    <Content Include="Views\Offers\Offer.cshtml" />
+    <Content Include="Views\Home\PetBuildings.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

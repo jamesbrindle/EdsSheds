@@ -1,6 +1,6 @@
 ﻿@using IR_BackOffice.Models
 
-<div id="divBookmakerFeedMain" style="overflow-y: auto; background-color: white;">
+<div id="divOffersFeedMain" style="overflow-y: auto; background-color: #f6f4bf;">
     @{
         var db = new IR_BackOffice.Infrastructure.IR_Database();
 
@@ -10,8 +10,8 @@
 
             if (!items.Any())
             {
-                <div style="background-color: white; padding: 10px 10px 10px 10px;">
-                    <span style="font-family: Gotham-Medium; color: black;">There are no offers to display.</span>
+                <div style="background-color: #f6f4bf; padding: 10px 10px 10px 10px;">
+                    <span style="font-family: Gotham-Medium; color: black;">There are no offers to display at this time.</span>
                 </div>
             }
             else
@@ -23,11 +23,11 @@
 
                 foreach (var item in items)
                 {
-                    <div style="background-color: white; line-height: 20px; padding: 5px 10px 5px 10px; margin-top: -10px;">
+                    <div style="background-color: #f6f4bf; line-height: 20px; padding: 5px 10px 5px 10px; margin-top: -10px;">
                         <table>
                             <tr style="vertical-align: middle;">
                                 <td style="width: 180px; text-align: left;">
-                                    <img style="border: 0px none white; max-width: 150px; margin-right: 10px; margin-bottom: 6px;" src="@Url.Action("DisplayImageAsync", "Offer", new { id = item.Id })" />
+                                    <img style="border: 0px none white; max-width: 150px; margin-right: 10px; margin-bottom: 6px;" src="@Url.Action("DisplayImageAsync", "Offers", new { id = item.Id })" />
                                 </td>
                                 <td style="vertical-align: middle;" colspan="2">
                                     <span style="font-family: Gotham-Medium; font-size: 11pt;">@item.DateAdded.ToLongDateString()</span><br />
@@ -59,8 +59,8 @@
         {
             Console.Out.WriteLine("Error: " + e.Message);
 
-            <div style="background-color: white; padding: 10px 10px 10px 10px;">
-                <span style="font-family: Gotham-Medium; color: black;">Error loading offer items. Please try again later.</span>
+            <div style="background-color: #f6f4bf; padding: 10px 10px 10px 10px;">
+                <span style="font-family: Gotham-Medium; color: black;">There are no offers to display at this time.</span>
             </div>
         }
     }

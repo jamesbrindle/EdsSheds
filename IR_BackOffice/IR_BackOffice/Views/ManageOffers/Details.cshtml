@@ -8,36 +8,45 @@
 <h2>Details</h2>
 
 <fieldset>
-    <legend>BookmakerItem</legend>
+    <legend>OfferItem</legend>
 
     <div>
-        @Html.DisplayNameFor(model => model.Title)
+        <b>@Html.DisplayNameFor(model => model.Title):</b>
     </div>
     <div>
         @Html.DisplayFor(model => model.Title)
     </div>
+    <br />
     <div>
-        @Html.DisplayNameFor(model => model.Text)
+        <b>@Html.DisplayNameFor(model => model.Text): </b>
     </div>
     <div>
         @Html.DisplayFor(model => model.Text)
     </div>
-
+    <br />
     <div>
-        @Html.DisplayNameFor(model => model.DateAdded)
+        <b>@Html.DisplayNameFor(model => model.DateAdded):</b>
     </div>
     <div>
         @Html.DisplayFor(model => model.DateAdded)
     </div>
-
+    <br />
     <div>
-        @Html.DisplayNameFor(model => model.IsLive)
+        <b>@Html.DisplayNameFor(model => model.IsLive):</b>
     </div>
     <div>
         @Html.DisplayFor(model => model.IsLive)
     </div>
+    <br />
+    <div>
+        <b>@Html.DisplayNameFor(model => model.Image):</b>
+    </div>
+    <br />
+    <div>
+        <img src="@Url.Action("DisplayImageAsync", "Offers", new { id = Model.Id })" />
+    </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @Style = "color: blue; text-decoration: underline;" })  |
+    @Html.ActionLink("Back to List", "Index", null, new { @Style = "color: blue; text-decoration: underline;" })
 </p>

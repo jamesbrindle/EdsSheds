@@ -20,7 +20,7 @@ namespace IR_BackOffice.Controllers
             return View(allOfferItems);
         }
 
-        public async Task<ActionResult> Bookmaker(int id)
+        public async Task<ActionResult> Offer(int id)
         {
             var detailedOfferItem = await Task.FromResult(_repository.OfferItems.Single(u => u.Id == id));
             return View(detailedOfferItem);
@@ -36,7 +36,7 @@ namespace IR_BackOffice.Controllers
                 img = trackingGif;
             }
 
-            return File(img, "image/jpeg");
+            return new FileContentResult(img, "image/jpeg");
         }
     }
 }

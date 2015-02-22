@@ -26,7 +26,7 @@ namespace IR_BackOffice.App_Start
             routes.MapRoute("PrivacyPolicy", "privacy-policy", new { controller = "Home", action = "PrivacyPolicy" }
                );
 
-            routes.MapRoute("Contact", "contact", new { controller = "Home", action = "Contact" }
+            routes.MapRoute("Contact", "contact-us", new { controller = "Home", action = "Contact" }
                );
 
             routes.MapRoute("FindingUs", "finding-us", new { controller = "Home", action = "FindingUs" }
@@ -70,6 +70,9 @@ namespace IR_BackOffice.App_Start
             routes.MapRoute("BrightIdeas", "bright-ideas", new { controller = "Home", action = "BrightIdeas" }
                );
 
+            routes.MapRoute("PetBuildings", "pet-buildings", new { controller = "Home", action = "PetBuildings" }
+               );
+
             //
 
             // ADMIN
@@ -77,7 +80,7 @@ namespace IR_BackOffice.App_Start
             routes.MapRoute("OffersAdmin", "offers-admin", new { controller = "Offers", action = "Index" }
                 );
 
-            routes.MapRoute("OfferItemAdmin", "offers-admin/{id}", new { controller = "Offer", action = "OfferItem", id = UrlParameter.Optional }
+            routes.MapRoute("OfferItemAdmin", "offers-admin/{id}", new { controller = "Offers", action = "OfferItem", id = UrlParameter.Optional }
                );
 
             // MISC

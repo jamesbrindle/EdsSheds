@@ -23,13 +23,14 @@
             @Html.ValidationMessageFor(model => model.Title)
         </div>
         <div>
-            Title
-        </div>
-        <div>
             Image
         </div>
-        <input type="file" name="image" />
-
+        <div>          
+            (Try to make the images roughly 1024px x 613px so the images match the rest of the site layout).
+            <br />
+            <br />
+        </div>
+            <input type="file" name="image" id="image" />
         <div>
             <br />
             Content

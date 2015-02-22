@@ -1,6 +1,6 @@
 ﻿@using IR_BackOffice.Models
 
-<div id="divBookmakerFeed2" style="overflow-y: auto; background-color: white;" class="scroll">
+<div id="divOffersFeed2" style="overflow-y: auto; background-color: white;" class="scroll">
     @{
         var db = new IR_BackOffice.Infrastructure.IR_Database();
 
@@ -11,7 +11,7 @@
             if (!items.Any())
             {
                 <div style="background-color: #8bb839; padding: 10px 10px 10px 10px;">
-                    <span style="font-family: Gotham-Medium; color: black;">There are no offers to display.</span>
+                    <span style="font-family: Gotham-Medium; color: black;">There are no offers to display at this time.</span>
                 </div>
             }
             else
@@ -25,11 +25,12 @@
                         <table>
                             <tr>
                                 <td style="width: 105px; padding-right: 10px; text-align: center; vertical-align: middle;">
-                                    <img style="border: 0px none white; height: 20px; max-width: 100px;" src="@Url.Action("DisplayImageAsync", "Offer", new { id = item.Id })" />
+                                    <img style="border: 0px none white; max-width: 120px;" src="@Url.Action("DisplayImageAsync", "Offers", new { id = item.Id })" />
                                 </td>
                                 <td>
-                                    <span style="font-family: Gotham-Medium">@item.DateAdded.ToLongDateString()</span><br />
-                                </td>
+                                    <span style="font-family: Gotham-Light;">@item.DateAdded.ToLongDateString()</span><br />
+                                    <span style="font-family: Gotham-Medium;">@item.Title.ToString()</span><br />
+                                </td>                                
                             </tr>
                         </table>
 
@@ -50,7 +51,13 @@
             Console.Out.WriteLine("Error: " + e.Message);
 
             <div style="background-color: #8bb839; padding: 10px 10px 10px 10px;">
-                <span style="font-family: Gotham-Medium; color: black;">Error loading offer items. Please try again later.</span>
+
+                @*DEBUG*@
+                @*<span style="font-family: Gotham-Medium; color: black;">Error loading offer items. Please try again later: @e.Message</span>*@
+
+                @*RELEASE*@
+                <span style="font-family: Gotham-Medium; color: black;">There are no offers to display at this time.</span>
+
             </div>
         }
     }
