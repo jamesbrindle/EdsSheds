@@ -209,6 +209,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\IR_Database.cs" />
+    <Compile Include="Migrations\201607050820102_eds_sheds.cs" />
+    <Compile Include="Migrations\201607050820102_eds_sheds.Designer.cs">
+      <DependentUpon>201607050820102_eds_sheds.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configurationl.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\OfferModels.cs" />
@@ -940,7 +944,6 @@
     <Content Include="Views\Home\TermsAndConditions.cshtml" />
     <Content Include="Views\Home\Offers.cshtml" />
     <Content Include="Views\Shared\_OffersFeed.cshtml" />
-    <Content Include="Views\Home\Sitemap.cshtml" />
     <Content Include="Views\Shared\_OffersFeedMain.cshtml" />
     <Content Include="Views\Home\FindingUs.cshtml" />
     <Content Include="Views\Home\PriceLists.cshtml" />
@@ -977,6 +980,11 @@
       <Project>{78E2C183-EEAE-4EC3-9C63-DA910C1A17B8}</Project>
       <Name>IR_BackOffice_Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201607050820102_eds_sheds.resx">
+      <DependentUpon>201607050820102_eds_sheds.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

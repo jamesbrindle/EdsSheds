@@ -19,7 +19,7 @@ namespace IR_BackOffice.Controllers
     public class HomeController : Controller
     {
         // TODO: Remove email password before uploading to GIT hub
-        private static readonly string sr_emailPassword = "";
+        private static readonly string sr_emailPassword = "ke4792567123";
 
         private readonly IBackOfficeDataSource _repository = new IR_Database();
 

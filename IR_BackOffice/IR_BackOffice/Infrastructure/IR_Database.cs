@@ -15,6 +15,11 @@ namespace IR_BackOffice.Infrastructure
         {
 
         }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDefaultSchema("eds_sheds");
+            base.OnModelCreating(modelBuilder);
+        }
         
         public DbSet<OfferItem> OfferItems { get; set; }
         

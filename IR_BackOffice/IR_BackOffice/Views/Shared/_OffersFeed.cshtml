@@ -11,7 +11,7 @@
             if (!items.Any())
             {
                 <div style="background-color: #8bb839; padding: 10px 10px 10px 10px;">
-                    <span style="font-family: Gotham-Medium; color: black;">There are no offers to display at this time.</span>
+                    <span style="font-family: Gotham-Medium; color: black;"># to display at this time.</span>
                 </div>
             }
             else
@@ -55,7 +55,7 @@
                 @*<span style="font-family: Gotham-Medium; color: black;">Error loading offer items. Please try again later: @e.Message</span>*@
 
                 @*RELEASE*@
-                <span style="font-family: Gotham-Medium; color: black;">There are no offers to display at this time.</span>
+                <span style="font-family: Gotham-Medium; color: black;">There are no offers to display at this time + @e.Message</span>
             </div>
         }
     }

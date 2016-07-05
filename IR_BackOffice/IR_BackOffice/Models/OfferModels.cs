@@ -16,7 +16,7 @@ namespace IR_BackOffice.Models
         public DbSet<OfferItem> OffersProfile { get; set; }
     }
 
-    [Table("OfferItem", Schema = "dbo")]
+    [Table("OfferItem", Schema = "eds_sheds")]
     public class OfferItem
     {
         [Key]
