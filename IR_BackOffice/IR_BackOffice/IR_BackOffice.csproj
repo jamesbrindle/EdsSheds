@@ -218,6 +218,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\OfferModels.cs" />
     <Compile Include="Models\EnquiryModel.cs" />
+    <Compile Include="privateclass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

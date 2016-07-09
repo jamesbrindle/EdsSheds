@@ -18,9 +18,6 @@ namespace IR_BackOffice.Controllers
 {
     public class HomeController : Controller
     {
-        // TODO: Remove email password before uploading to GIT hub
-        private static readonly string sr_emailPassword = "ke4792567123";
-
         private readonly IBackOfficeDataSource _repository = new IR_Database();
 
         public ActionResult Index()
@@ -217,19 +214,24 @@ namespace IR_BackOffice.Controllers
             if (ModelState.IsValid)
             {
                 SmtpClient client = new SmtpClient();
-                client.Port = 587;
+                client.Port = 25;
 
-                client.Host = "smtp.live.com";
+                client.Host = "mail.jbnet.co.uk";
 
-                client.EnableSsl = true;
+                client.EnableSsl = false;
                 client.Timeout = 10000;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
                 client.UseDefaultCredentials = false;
 
-                // TODO: make sure you remove password before a commit
-                client.Credentials = new System.Net.NetworkCredential("jamie.brindle@hotmail.com", sr_emailPassword);
+                // TODO: replace password on debug mode with privateclass.emailpassword
+#if DEBUG
+                client.Credentials = new System.Net.NetworkCredential("webmessage@edssheds", "");
 
-                MailMessage mm = new MailMessage(collection.EmailAddress, "edssheds@ntlworld.com", collection.ContactName + (string.IsNullOrEmpty(collection.TelephoneNumber) ? "" : " - "
+#else
+                client.Credentials = new System.Net.NetworkCredential("webmessage@edssheds", privateclass.emailpassword);
+#endif
+
+                MailMessage mm = new MailMessage("Web Message - " + collection.ContactName + " " + collection.EmailAddress, "edssheds@ntlworld.com", collection.ContactName + (string.IsNullOrEmpty(collection.TelephoneNumber) ? "" : " - "
                     + collection.TelephoneNumber), GetMessageBody(collection, false));
 
                 mm.BodyEncoding = UTF8Encoding.UTF8;
@@ -240,19 +242,25 @@ namespace IR_BackOffice.Controllers
                 if (collection.SendToSelf)
                 {
                     SmtpClient clientSelf = new SmtpClient();
-                    clientSelf.Port = 587;
+                    clientSelf.Port = 25;
 
-                    clientSelf.Host = "smtp.live.com";
+                    clientSelf.Host = "mail.jbnet.co.uk";
 
-                    clientSelf.EnableSsl = true;
+                    clientSelf.EnableSsl = false;
                     clientSelf.Timeout = 10000;
                     clientSelf.DeliveryMethod = SmtpDeliveryMethod.Network;
                     clientSelf.UseDefaultCredentials = false;
 
                     // TODO: make sure you remove password before a commit
-                    clientSelf.Credentials = new System.Net.NetworkCredential("jamie.brindle@hotmail.com", sr_emailPassword);
+                    // TODO: replace password on debug mode with privateclass.emailpassword
+#if DEBUG
+                    clientSelf.Credentials = new System.Net.NetworkCredential("webmessage@edssheds", "");
 
-                    MailMessage mmSelf = new MailMessage(collection.EmailAddress, collection.EmailAddress, "Ed's Sheds Webform Email - " + collection.ContactName + (string.IsNullOrEmpty(collection.TelephoneNumber) ? "" : " - "
+#else
+                    clientSelf.Credentials = new System.Net.NetworkCredential("webmessage@edssheds", privateclass.emailpassword);
+#endif
+
+                    MailMessage mmSelf = new MailMessage("Ed's Sheds - Web Message webmessage@edssheds.org", collection.EmailAddress, "Ed's Sheds Webform Email - " + collection.ContactName + (string.IsNullOrEmpty(collection.TelephoneNumber) ? "" : " - "
                         + collection.TelephoneNumber), GetMessageBody(collection, true));
 
                     mmSelf.BodyEncoding = UTF8Encoding.UTF8;
@@ -286,7 +294,7 @@ namespace IR_BackOffice.Controllers
                 {
                     message += "Reply to: " + colleciton.EmailAddress + "\n\n";
                 }
-                
+
                 message += colleciton.Enquiry;
             }
 

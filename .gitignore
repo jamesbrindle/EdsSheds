@@ -1,4 +1,9 @@
-ES_BackOffice/IR_BackOffice/ES_BackOffice.csproj
-ES_BackOffice/IR_BackOffice/ES_BackOffice.csproj.user
+ES_BackOffice/IR_BackOffice/IR_BackOffice.csproj
+ES_BackOffice/IR_BackOffice/IR_BackOffice.csproj.user
 IR_BackOffice/IR_BackOffice/Web.Release.config
 IR_BackOffice/IR_BackOffice/Web.Release.config
+IR_BackOffice/IR_BackOffice/obj
+IR_BackOffice/IR_BackOffice/bin
+IR_BackOffice/IR_BackOffice/privateclass.cs
+IR_BackOffice/IR_BackOffice_Data/obj
+IR_BackOffice/IR_BackOffice_Data/bin
