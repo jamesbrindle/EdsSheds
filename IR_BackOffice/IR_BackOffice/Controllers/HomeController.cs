@@ -13,6 +13,7 @@ using System.Web.Hosting;
 using System;
 using System.Net.Mail;
 using System.Text;
+using System.Windows.Forms;
 
 namespace IR_BackOffice.Controllers
 {
@@ -213,63 +214,77 @@ namespace IR_BackOffice.Controllers
 
             if (ModelState.IsValid)
             {
-                SmtpClient client = new SmtpClient();
-                client.Port = 25;
-
-                client.Host = "mail.jbnet.co.uk";
-
-                client.EnableSsl = false;
-                client.Timeout = 10000;
-                client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                client.UseDefaultCredentials = false;
-
-                // TODO: replace password on debug mode with privateclass.emailpassword
-#if DEBUG
-                client.Credentials = new System.Net.NetworkCredential("webmessage@edssheds", "");
-
-#else
-                client.Credentials = new System.Net.NetworkCredential("webmessage@edssheds", privateclass.emailpassword);
-#endif
-
-                MailMessage mm = new MailMessage("Web Message - " + collection.ContactName + " " + collection.EmailAddress, "edssheds@ntlworld.com", collection.ContactName + (string.IsNullOrEmpty(collection.TelephoneNumber) ? "" : " - "
-                    + collection.TelephoneNumber), GetMessageBody(collection, false));
-
-                mm.BodyEncoding = UTF8Encoding.UTF8;
-                mm.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
-
-                client.Send(mm);
-
-                if (collection.SendToSelf)
+                try
                 {
-                    SmtpClient clientSelf = new SmtpClient();
-                    clientSelf.Port = 25;
 
-                    clientSelf.Host = "mail.jbnet.co.uk";
+                    SmtpClient client = new SmtpClient();
+                    client.Port = 587;
 
-                    clientSelf.EnableSsl = false;
-                    clientSelf.Timeout = 10000;
-                    clientSelf.DeliveryMethod = SmtpDeliveryMethod.Network;
-                    clientSelf.UseDefaultCredentials = false;
+                    client.Host = "smtp.gmail.com";
 
-                    // TODO: make sure you remove password before a commit
+                    client.EnableSsl = true;
+                    client.Timeout = 10000;
+                    client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    client.UseDefaultCredentials = false;
+
                     // TODO: replace password on debug mode with privateclass.emailpassword
 #if DEBUG
-                    clientSelf.Credentials = new System.Net.NetworkCredential("webmessage@edssheds", "");
+                    client.Credentials = new System.Net.NetworkCredential("jamie.brindle7.work@gmail.com", "");
+
+#else
+                client.Credentials = new System.Net.NetworkCredential("jamie.brindle7.work@gmail.com", privateclass.emailpassword);
+#endif
+
+                    MailMessage mm = new MailMessage("Web Message - " + collection.ContactName + " " + collection.EmailAddress, "edssheds@ntlworld.com", collection.ContactName + (string.IsNullOrEmpty(collection.TelephoneNumber) ? "" : " - "
+                        + collection.TelephoneNumber), GetMessageBody(collection, false));
+
+                    mm.ReplyToList.Add(new MailAddress(collection.EmailAddress, collection.ContactName));
+
+                    mm.BodyEncoding = UTF8Encoding.UTF8;
+                    mm.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+
+                    client.Send(mm);
+
+                    if (collection.SendToSelf)
+                    {
+                        SmtpClient clientSelf = new SmtpClient();
+                        clientSelf.Port = 587;
+
+                        clientSelf.Host = "smtp.gmail.com";
+
+                        clientSelf.EnableSsl = true;
+                        clientSelf.Timeout = 10000;
+                        clientSelf.DeliveryMethod = SmtpDeliveryMethod.Network;
+                        clientSelf.UseDefaultCredentials = false;
+
+                        // TODO: make sure you remove password before a commit
+                        // TODO: replace password on debug mode with privateclass.emailpassword
+#if DEBUG
+                        clientSelf.Credentials = new System.Net.NetworkCredential("webmessage@edssheds", "");
 
 #else
                     clientSelf.Credentials = new System.Net.NetworkCredential("webmessage@edssheds", privateclass.emailpassword);
 #endif
 
-                    MailMessage mmSelf = new MailMessage("Ed's Sheds - Web Message webmessage@edssheds.org", collection.EmailAddress, "Ed's Sheds Webform Email - " + collection.ContactName + (string.IsNullOrEmpty(collection.TelephoneNumber) ? "" : " - "
-                        + collection.TelephoneNumber), GetMessageBody(collection, true));
+                        MailMessage mmSelf = new MailMessage("Ed's Sheds - Web Message edssheds@ntlworld.com", collection.EmailAddress, "Ed's Sheds Webform Email - " + collection.ContactName + (string.IsNullOrEmpty(collection.TelephoneNumber) ? "" : " - "
+                            + collection.TelephoneNumber), GetMessageBody(collection, true));
 
-                    mmSelf.BodyEncoding = UTF8Encoding.UTF8;
-                    mmSelf.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+                        mmSelf.ReplyToList.Add(new MailAddress("edssheds@ntlworld.com", "Ed's Sheds - Web Message edssheds@ntlworld.com"));
 
-                    client.Send(mmSelf);
+                        mmSelf.BodyEncoding = UTF8Encoding.UTF8;
+                        mmSelf.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+
+                        client.Send(mmSelf);
+                    }
+
+                    return View("ThankYou");
                 }
+                catch
+                {
+                    MessageBox.Show("Mail Send Error", "Error sender email. Possible server issue. Please try again later", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                return View("ThankYou");
+                    return View(collection);
+                }
             }
             else
             {

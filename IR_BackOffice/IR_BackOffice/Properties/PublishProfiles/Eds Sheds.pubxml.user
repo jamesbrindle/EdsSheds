@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>\\JAMIE-SERVER\inetpub\wwwroot\EdsSheds</_PublishTargetUrl>
+    <_PublishTargetUrl>F:\OneDrive\Documents\Work\wwwroot\EdsSheds</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Data/Content/fonts/Gotham-Bold.otf">
@@ -316,13 +316,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/22/2015 14:33:47</publishTime>
     </File>
     <File Include="bin/IR_BackOffice.dll">
-      <publishTime>07/19/2016 17:21:02</publishTime>
+      <publishTime>02/26/2017 18:17:13</publishTime>
     </File>
     <File Include="bin/IR_BackOffice.dll.config">
       <publishTime>01/23/2015 19:01:35</publishTime>
     </File>
     <File Include="bin/IR_BackOffice_Data.dll">
-      <publishTime>07/19/2016 17:21:01</publishTime>
+      <publishTime>02/26/2017 18:17:12</publishTime>
     </File>
     <File Include="bin/it/Microsoft.Data.Edm.resources.dll">
       <publishTime>02/22/2015 23:12:10</publishTime>
@@ -748,7 +748,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/22/2015 23:28:34</publishTime>
     </File>
     <File Include="Controllers/HomeController.cs">
-      <publishTime>07/09/2016 18:23:16</publishTime>
+      <publishTime>02/26/2017 18:13:38</publishTime>
     </File>
     <File Include="Controllers/ManageOffersController.cs">
       <publishTime>02/22/2015 23:48:59</publishTime>
@@ -1726,13 +1726,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/22/2015 23:12:11</publishTime>
     </File>
     <File Include="privateclass.cs">
-      <publishTime>07/09/2016 14:18:18</publishTime>
+      <publishTime>02/26/2017 18:01:15</publishTime>
     </File>
     <File Include="Properties/AssemblyInfo.cs">
       <publishTime>02/22/2015 23:47:36</publishTime>
     </File>
     <File Include="Properties/PublishProfiles/Eds Sheds.pubxml">
-      <publishTime>07/05/2016 09:56:41</publishTime>
+      <publishTime>02/26/2017 18:18:38</publishTime>
     </File>
     <File Include="Properties/PublishProfiles/Stag.pubxml">
       <publishTime>02/22/2015 23:12:13</publishTime>
@@ -2722,7 +2722,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/22/2015 23:12:13</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/19/2016 17:21:11</publishTime>
+      <publishTime>02/26/2017 18:18:39</publishTime>
     </File>
     <File Include="Web.Debug.config">
       <publishTime>02/22/2015 23:12:13</publishTime>
